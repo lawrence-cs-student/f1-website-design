@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --color-racing-red: #BB0A30;
+  --color-metallic-silver: #C0C0C0;
+  --color-matte-black: #0A0A0A;
+  --color-dark-charcoal: #121212;
+
+  --font-display: var(--font-bebas), "sans-serif";
+  --font-sans: var(--font-inter), "sans-serif";
+}
+
+@layer base {
+  body {
+    background-color: var(--color-matte-black);
+    color: #FFFFFF;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .glass-panel-red {
+    background: rgba(187, 10, 48, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(187, 10, 48, 0.2);
+  }
+
+  .red-glow {
+    box-shadow: 0 0 50px rgba(187, 10, 48, 0.4);
+  }
+
+  .red-text-glow {
+    text-shadow: 0 0 30px rgba(187, 10, 48, 0.7);
+  }
+
+  .metallic-border {
+    border: 1px solid rgba(192, 192, 192, 0.2);
+  }
+
+  .gradient-radial-red {
+    background: radial-gradient(circle at center, rgba(187,10,48,0.15) 0%, rgba(10,10,10,0) 70%);
+  }
+}
